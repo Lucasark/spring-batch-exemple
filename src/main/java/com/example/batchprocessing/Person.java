@@ -1,37 +1,54 @@
 package com.example.batchprocessing;
 
+import java.math.BigInteger;
+
 public class Person {
 
-	private String lastName;
-	private String firstName;
+    private BigInteger personId;
+    private String lastName;
+    private String firstName;
 
-	public Person() {
-	}
+    public Person() {
+    }
 
-	public Person(String firstName, String lastName) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-	}
+    public Person(BigInteger personId, String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.personId = personId;
+    }
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
+    public Person(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.personId = personId;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
+    public String getFirstName() {
+        return firstName;
+    }
 
-	public String getLastName() {
-		return lastName;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+    public String getLastName() {
+        return lastName;
+    }
 
-	@Override
-	public String toString() {
-		return "firstName: " + firstName + ", lastName: " + lastName;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
+    @Override
+    public String toString() {
+        return "firstName: " + firstName + ", lastName: " + lastName;
+    }
+
+    public BigInteger getPersonId() {
+        return personId;
+    }
+
+    public void setPersonId(BigInteger personId) {
+        this.personId = personId;
+    }
 }
